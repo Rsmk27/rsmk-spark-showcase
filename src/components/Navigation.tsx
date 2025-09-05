@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import rsmkLogo from '@/assets/rsmk-logo.png';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,10 +47,14 @@ const Navigation = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-primary bg-clip-text text-transparent cursor-pointer"
+            className="cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            RSMK
+            <img 
+              src={rsmkLogo} 
+              alt="RSMK Logo" 
+              className="h-10 w-auto filter brightness-0 invert hover:drop-shadow-[0_0_10px_rgba(0,191,255,0.5)] transition-all duration-300"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
